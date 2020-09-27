@@ -57,16 +57,16 @@ public class FourSum {
 
             }
         }
-        List<Integer[]> finalResult = new ArrayList<>();
+        //List<Integer[]> finalResult = new ArrayList<>();
         for (Map<Integer, Integer> result : resultMap) {
-            Integer[] r = new Integer[result.keySet().size()];
-            int i = 0;
+            //Integer[] r = new Integer[result.keySet().size()];
+            //int i = 0;
             for(Integer k : result.keySet()) {
-                r[i++] = a[k];
+                //r[i++] = a[k];
                 System.out.print(a[k] + " ");
             }
             System.out.println();
-            finalResult.add(r);
+            //finalResult.add(r);
         }
 
     }
