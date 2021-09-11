@@ -9,18 +9,19 @@ public class FourSum {
         }
     }
     public static void fourSum(int [] a, int sum) {
-        Map<Integer, Pair> mp = new HashMap<>();
+        Map<Integer, Pair> map2Number = new HashMap<>();
         for (int i = 0; i < a.length - 1; i++) {
             for (int j = i + 1; j < a.length; j++) {
-                mp.put(a[i] + a[j], new Pair(i, j));
+                map2Number.put(a[i] + a[j], new Pair(i, j));
             }
         }
+
         List<Map<Integer, Integer>> resultMap  = new ArrayList<>();
         for (int i = 0; i < a.length - 1; i++) {
             for (int j = i + 1; j < a.length; j++) {
                 int sumPair = a[i] + a[j];
-                if (mp.containsKey(sum - sumPair)) {
-                    Pair p = mp.get(sum - sumPair);
+                if (map2Number.containsKey(sum - sumPair)) {
+                    Pair p = map2Number.get(sum - sumPair);
                     if (p.first != i && p.first != j
                             && p.second != i && p.second != j) {
                         if (resultMap.size() == 0) {
@@ -72,7 +73,9 @@ public class FourSum {
     }
     public static void main(String[] args)
     {
-        int arr[] = { 7, 6, 4, -1, 1, 2 };
+        int arr[] = { 7, 6, 4, -1, 11, 2 };
+        //13 {0, 1} 3 {4,5} {2,3}
+
         int sum = 16;
         fourSum(arr, sum);
     }
